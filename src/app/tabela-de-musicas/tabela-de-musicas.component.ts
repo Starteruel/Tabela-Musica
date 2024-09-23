@@ -1,28 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { MusicasService } from '../musicas.service';
-import { musica } from '../musicas';
 
+import { Component } from '@angular/core';
+import { musica } from '../musicas';
+import { MusicasService } from '../musicas.service';
 @Component({
   selector: 'app-tabela-de-musicas',
   templateUrl: './tabela-de-musicas.component.html',
-  styleUrls: ['./tabela-de-musicas.component.css']
+  styleUrl: './tabela-de-musicas.component.css'
 })
+export class TabelaDeMusicasComponent {
 
-export class TabelaDeMusicasComponent implements OnInit {
-delete(_t14: musica) {
-throw new Error('Method not implemented.');
+  musicas: musica[] =[];
+  constructor(private service: MusicasService){}
 
-}
+  ngOnInit(){
+    this.loadMusicas()
+  }
 
-  musicas: musica[] = [];
+  loadMusicas(){
+    this.service.getMusicas().subscribe({
+      next: data => this.musicas = data
+    })
+  }
 
-  constructor(private musicasService: MusicasService) {}
-
-  ngOnInit(): void {
-    this.musicasService.getMusicas().subscribe(data => {
-      this.musicas = data;
-    });
-
+  delete(musica: musica){
+   this.service.delete(musica).subscribe({
+      next: () => this.loadMusicas()
+   })
   }
 
 }

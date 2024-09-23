@@ -7,18 +7,19 @@ import { musica } from './musicas';
   providedIn: 'root'
 })
 export class MusicasService {
-  getMusics() {
-    throw new Error('Method not implemented.');
-  }
+
+
   private apiUrl = 'http://localhost:3000/musicas';
 
   constructor(private http: HttpClient) {}
+
+  getMusicas(): Observable<musica[]> {
+    return this.http.get<musica[]>(this.apiUrl);
+  }
 
   delete(musica: musica): Observable<void>{
     return this.http.delete<void>('http://localhost:3000/musics/' + musica.id);
    }
 
-  getMusicas(): Observable<musica[]> {
-    return this.http.get<musica[]>(this.apiUrl);
-  }
+
 }
