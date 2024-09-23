@@ -1,0 +1,30 @@
+{
+  "musicas": [
+    {
+      "id": 1,
+      "name": "Welcome to the Jungle",
+      "price": 9.95,
+      "category": "Rock",
+      "artist": "Guns N' Roses",
+      "year": 1987
+    },
+    {
+      "id": 2,
+      "name": "Run Through the Jungle",
+      "price": 8.9,
+      "category": "Rock",
+      "artist": "Creedence",
+      "year": 1970
+    },
+    {
+      "id": 3,
+      "name": "Champagne Showers",
+      "price": 9.8,
+      "category": "Pop",
+      "artist": "LMFAO",
+      "year": 2011
+
+    }
+
+  ]
+}
