@@ -24,7 +24,35 @@
       "artist": "LMFAO",
       "year": 2011
 
+    },
+    {
+      "id": 4,
+      "name": "Murmaider",
+      "price": 9.95,
+      "category": "Rock",
+      "artist": "Metalocalypse: Dethklok",
+      "year": 2007
+
+    },
+    {
+      "id": 5,
+      "name": "Awaken",
+      "price": 9.98,
+      "category": "Rock",
+      "artist": "Metalocalypse: Dethklok",
+      "year": 2007
+
+    },
+    {
+      "id": 6,
+      "name": "Thunderstruck",
+      "price": 9.98,
+      "category": "Rock",
+      "artist": "AC/DC",
+      "year": 1990
+
     }
+
 
   ]
 }
