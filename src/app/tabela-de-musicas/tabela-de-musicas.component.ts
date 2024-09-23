@@ -7,10 +7,13 @@ import { musica } from '../musicas';
   templateUrl: './tabela-de-musicas.component.html',
   styleUrls: ['./tabela-de-musicas.component.css']
 })
+
 export class TabelaDeMusicasComponent implements OnInit {
 delete(_t14: musica) {
 throw new Error('Method not implemented.');
+
 }
+
   musicas: musica[] = [];
 
   constructor(private musicasService: MusicasService) {}
@@ -19,5 +22,7 @@ throw new Error('Method not implemented.');
     this.musicasService.getMusicas().subscribe(data => {
       this.musicas = data;
     });
+
   }
+
 }
