@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-delete(_t14: any) {
-throw new Error('Method not implemented.');
-}
   title = 'Tabela-Musicas';
-musicas: any;
 }
